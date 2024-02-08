@@ -147,3 +147,23 @@ const breackStatement = (numero) => {
 	}
 	return array;
 };
+
+//ITERA EN UN BUCLE AUMENTANDO EN 2 EL NRO RECIBIDO  HASTA 10 VECES.
+//GUARDA EL VALOR EN UN NUEVO ARRAY Y RETORNALO.
+//CUANDO EL NRO DE ITERACION ALCANCE EL VALOR DE 5, NO SE SUMA EN ESE CASO Y SE CONTINUA.
+
+const contunueIn5 = (numero) => {
+	let array = [];
+	for (let i = 0; i < 10; i++) {
+		if (i === 5) {
+			//Si el indice es igual a 5 se continua.
+			continue;
+		}
+		if (array.length === 0) {
+			//Si no es el indice 5 y el largo del array esta vacio se le suma 2 al numero agregando esto al array.
+			array.push(numero + 2);
+		}
+		array.push(array[array.length - 1] + 2); //al ultimo puesto del array se le suma 2
+	}
+	return array;
+};
