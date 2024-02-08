@@ -117,3 +117,33 @@ const mesesDelAño = (array) => {
 
 	return 'No se encontraron los meses pedidos';
 };
+//LA FUNCION CONTIENE UN ARRAY CON NUMEROS DEL 0 AL 200, RECORRE EL ARRAY Y GUARDA EN UN NUEVO ARRAY LOS NUMEROS MAYORES A 100 (NO INCLUYE 100)
+//RETORNA EL NUEVO ARRAY
+const mayorA100 = (array) => {
+	let mayoresA100 = array.filter((number) => number >= 101);
+	return mayoresA100;
+};
+
+//ITERA UN BUCLE AUMENTANDO X2 HASTA 10 VECES.
+//GUARDA CADA NUEVO VALOR EN  UN ARRAY NUEVA.
+//RETORNA EL ARRAY.
+//SI EN ALGUN MOMENTO EL NUMERO DE LA SUMA COINCIDE CON LA CANTIDAD DE ITERACIONES DEBES INTERRUMPIR LA EJECUCION Y RETORNAR 'SE ROMPIO LA EJECUCION'.
+
+const breackStatement = (numero) => {
+	let array = [];
+	let interrumped = false;
+	for (let i = 1; i <= 10; i++) {
+		if (array.length === 0) {
+			array.push(numero * 2); //Esto garantiza que el primer valor en el array sea numero * 2.
+		}
+		if (array[array.length - 1] === i) {
+			interrumped = true; //Se verifica si el último elemento del array es igual al contador i.
+			break;
+		}
+		array.push(array[array.length - 1] * 2); // Si no se cumplen las condiciones anteriores, se agrega al array el doble del último elemento del array.
+	}
+	if (interrumped) {
+		return 'Se rompio la ejecucion';
+	}
+	return array;
+};
