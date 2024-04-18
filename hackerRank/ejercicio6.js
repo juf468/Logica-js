@@ -49,3 +49,15 @@
 // Explicación
 
 // Cada uno de los valores resultantes representa el número de veces que apareció en .
+function countingSort(arr) {
+ 
+    const frequencyArray = new Array(100).fill(0);
+
+
+    for (let i = 0; i < arr.length; i++) {
+        frequencyArray[arr[i]]++;
+    }
+
+    
+    return frequencyArray;
+}
