@@ -90,3 +90,10 @@ const verificarPassword = (usuario, password) => {
 	usuario.password = nuevaPassword
 	return usuario
  }
+ //USUARIO TIENE UNA PROPIEDAD LLAMADA 'amigos' QUE ES UNA ARRAY
+ //AGREGA 'NUEVO AMIGO' AL FINAL DEL ARRAY
+ //DEVUELVE EL OBJETO
+ const AgregarAmigo = (usuario, nuevoAmigo) => {
+	usuario.amigos.push(nuevoAmigo);
+	return usuario
+ }
