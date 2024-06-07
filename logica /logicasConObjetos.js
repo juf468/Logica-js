@@ -84,3 +84,9 @@ const verificarPassword = (usuario, password) => {
 	return false
 }
 
+//REEMPLAZA LA CONTRASEÑA EXISTENTE EN EL OBJETO 'USUARIO' CON EL VALOR 'NUEVA PASSWORD' 
+//DEVUELVE EL OBJETO
+ const actualizarPassword = (usuario, nuevaPassword) =>{
+	usuario.password = nuevaPassword
+	return usuario
+ }
