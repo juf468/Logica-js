@@ -57,3 +57,30 @@ const nuevouUsuario = (nombre, emial, password) => {
 	return Usuario
 }
 
+//DEVUELVE TRUE SI EL OBJETO (OBJECT) TIENE LA PROPIEDAD (KEY) CUYO NOMBRE ES IGUAL AL ARGUMENTO PROPIEDAD
+//PROPIEDAD ES UN STRING
+//DE LO CONTRARIO DEVUELVE FALSE
+
+const tienePropiedad = (objeto, propiedad) => {
+	const keysArray = Object.keys(objeto);
+//Object.keys() es un método estático de la clase Object en JavaScript. Este método 
+//devuelve un array de las propiedades enumerables de un objeto dado,
+//en el mismo orden en que se presenten al iterar sobre el objeto de manera normal
+// ejemplo: const keysArray = Object.keys(persona);
+//console.log(keysArray); // ["nombre", "edad", "ciudad"]
+
+	if (keysArray.includes(propiedad)){
+		return true
+	}
+	return false
+}
+//COMPRUEBA SI EL PASSWORD ENVIADO POR PARAMETRO COINCIDE CON LA PROPIEDAD 'PASSWORD' DEL OBJETO 'USUARIO'
+// DEVUELVE 'TRUE' SI COINCIDE, DE LO CONTRARIO DELVUELVE 'FALSE'
+
+const verificarPassword = (usuario, password) => {
+	if (usuario.password === password) {
+		return true
+	}
+	return false
+}
+
