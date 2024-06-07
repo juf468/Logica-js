@@ -39,3 +39,10 @@ const multiplicaElNumeroMisterioso = (objetoMisterioso) => {
 	const misterio = objetoMisterioso.numeroMisterioso * 5;
 	return misterio;
 };
+
+//ELIMINA LA PROPIEDAD DE OBJETO CUYO NOMBRE ESTA PASANDO POR EL PARAMENTRO 'UNAPROPIEDAD'
+// DEVOLVE EL OBJETO
+const eliminarPropiedad = (objeto, unaPropiedad) => {
+	delete objeto[unaPropiedad];
+	return objeto
+}
