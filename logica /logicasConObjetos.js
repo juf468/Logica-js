@@ -46,3 +46,14 @@ const eliminarPropiedad = (objeto, unaPropiedad) => {
 	delete objeto[unaPropiedad];
 	return objeto
 }
+//CREA UN NUEVO OBJETO CON LAS PROPIEDADES, COINCIDIENDO CON LOS ARGUMENTOS PASADOS EN LA FUNCION.
+//DEVUELVE EL OBJETO
+const nuevouUsuario = (nombre, emial, password) => {
+	const Usuario = {
+		nombre: nombre,
+		emial: emial,
+		password: password
+	}
+	return Usuario
+}
+
