@@ -97,3 +97,4 @@ const verificarPassword = (usuario, password) => {
 	usuario.amigos.push(nuevoAmigo);
 	return usuario
  }
+ weqwe
