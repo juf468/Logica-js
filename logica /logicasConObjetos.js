@@ -108,3 +108,18 @@ const PasarUsuarioAPremium =(usuarios)=>{
 		}
 	return usuarios
 }
+//'USUARIO' TIENE LA PROP LLAMADA 'POST' (ES UN ARRAY DE OBJ 'POST')
+//CADA ONJETO POST TIENE UNA PROPIEDAD LLAMADA 'LIKE' (NRO ENTERO)
+//SUMA TODOS LOS LIKES DE TODOS LOS OBJ POST Y DEVUELVE LA SUMA
+
+const SumarLikesDeUsuarios = (usuario) => {
+	let contador = 0
+	for (let i = 0; i < usuario.post.length; i++) {
+		contador = contador + usuario.post[i].likes;
+	}
+	return contador
+}
+/* MEJORADO: */
+const SumarLikesDeUsuarios2 = (usuario) => {
+    return usuario.post.reduce((contador, post) => contador + post.likes, 0);
+};
