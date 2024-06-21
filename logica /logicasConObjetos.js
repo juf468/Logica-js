@@ -97,4 +97,14 @@ const verificarPassword = (usuario, password) => {
 	usuario.amigos.push(nuevoAmigo);
 	return usuario
  }
- weqwe
+ //'USUARIOS' ES UNA ARRAY DE OBJETOS 'USUARIO'
+ //CADA OBJ TIENE UNA PROPIEDAD LLAMADA 'ESPREMIUM'
+ //DEFINE DICHA PROPIEDAD DE CADA OBJ COMO TRUE
+ //DEVUELVE EL ARRAY DE USUARIOS
+
+const PasarUsuarioAPremium =(usuarios)=>{
+		for (let i = 0; i < usuarios.length; i++) {
+			usuarios[i].EsPremium = true
+		}
+	return usuarios
+}
