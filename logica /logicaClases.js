@@ -32,3 +32,23 @@ const AgregatStringInvertida =( )=>{
         return this.split('').reverse().join('')
     }
 }
+//CREA EL CONSTRUCTOR DE LA CLASE 'PEPRSONA' 
+//DEBE TENER COMO PROPIEDADES 'NOMBRE', 'APELLIDO', 'EDAD', 'DOMICILIO'
+//DEBE TENER UN METODO LLAMADO 'DETALLE' QUE DEVUELVE UN OBJ CON LAS PROPS Y SUS VALORES
+
+class Persona {
+    constructor(nombre, apellido, edad, domicilio){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.domicilio = domicilio;
+    }
+    detalle(){
+        return {
+            nombre: this.nombre,
+            apellido: this.apellido,
+            edad: this.edad,
+            domicilio: this.domicilio,
+        }
+    }
+}
