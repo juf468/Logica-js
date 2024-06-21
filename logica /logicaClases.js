@@ -20,8 +20,15 @@ class Usuario {
 //AGREGA UN METODO AL CONSTRUCTOR DEL PROTOTYPE 
 //EL METODO DEBE LLAMARSE 'SALUDAR' Y RETORNA 'HELLO WORD'
 
-const AgregarMetodoPrototype=(constructor)=> {
+const AgregarMetodoPrototype = (constructor)=> {
     constructor.prototype.saludar = function(){
         return 'Hello Word'
+    }
+}
+//AGREGA UN METODO PROTOTYPE DE STRINGQUE DEVUELVA LA MISMA CADENA DE CARACTERES PERO INVERTIDA
+//EL METODO DEBE LLAMARSE 'reverse'
+const AgregatStringInvertida =( )=>{
+    String.prototype.Reverse = function(){
+        return this.split('').reverse().join('')
     }
 }
