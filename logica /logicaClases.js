@@ -17,3 +17,11 @@ class Usuario {
     }
 }
 
+//AGREGA UN METODO AL CONSTRUCTOR DEL PROTOTYPE 
+//EL METODO DEBE LLAMARSE 'SALUDAR' Y RETORNA 'HELLO WORD'
+
+const AgregarMetodoPrototype=(constructor)=> {
+    constructor.prototype.saludar = function(){
+        return 'Hello Word'
+    }
+}
