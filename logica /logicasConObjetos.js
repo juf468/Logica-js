@@ -123,3 +123,27 @@ const SumarLikesDeUsuarios = (usuario) => {
 const SumarLikesDeUsuarios2 = (usuario) => {
     return usuario.post.reduce((contador, post) => contador + post.likes, 0);
 };
+
+//AGREGUE UN METODO AL OBJ 'PRODUCTOS' (SE DEBE LLAMAR 'PorcentajeDeDescuento)
+//EL METODO DEBE MULTIPLICAR EL 'PRECIO' DEL PRODUCTO POR  'PORCENTAJE DE DESCUENTO' 
+//EL METODO DEBE RESTAR EL 'DESCUENTO' DEL PRECIO Y DEVUELVE EL PRECIO DEL DESCUENTO
+// DEVUELVE EL OBJ DEL PRODUCTO
+
+const AgregarMetodoAlCalculoDescuento =(producto)=>{
+	const CalcularPrecioDescuento = function(){
+		const Descuento = producto.precio * producto.PorcentajeDeDescuento;
+		return producto.precio - Descuento; 
+	}
+	producto.CalcularPrecioDescuento = CalcularPrecioDescuento;
+	return producto
+}
+
+/* MEJORA :*/
+
+const AgregarMetodoAlCalculoDescuento2 = (producto) => {
+    producto.CalcularPrecioDescuento = function() {
+        const descuento = this.precio * this.PorcentajeDeDescuento;
+        return this.precio - descuento;
+    };
+    return producto;
+};
