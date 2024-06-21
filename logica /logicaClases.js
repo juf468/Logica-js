@@ -52,3 +52,10 @@ class Persona {
         }
     }
 }
+//AGREGA UN METODO 'DATOS' A LA CLASE PERSONA QUE TOMA EL NOMBRE Y LA EDAD Y LO DEVUELVE EN STRING
+//EJEMPLO ; 'JUAN, 22 AÑOS'
+
+const AgregarMetodo = () => {
+    return `${this.nombre}, ${this.edad} años`;
+};
+
